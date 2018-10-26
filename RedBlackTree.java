@@ -18,17 +18,11 @@ public class RedBlackTree {
         
         int r = x.getLeftAugment().size; // normalt +1, men vi bruger her N-1 og ikke N som i clrs
         
-        if(rank == r)
-        {
+        if(rank == r) {
             return x;
-        }
-        else if(rank < r)
-        {
+        } else if(rank < r) {
             return select(x.left, rank);
-        }
-        
-        else
-        {
+        } else {
             return select(x.right, rank-r-1); 
         }
     }
